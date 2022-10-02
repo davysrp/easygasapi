@@ -18,3 +18,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/register','AuthController@register');
+
+$router->group(['middleware' => 'auth:api'], function () use ($router) {
+    $router->post('/phone-login','AuthController@loginWithPhone');
+});

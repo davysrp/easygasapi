@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => env('AUTH_GUARD', 'customer'),
+        'guard' => env('AUTH_GUARD', 'user'),
     ],
 
     /*
@@ -42,6 +42,10 @@ return [
         'customer' => [
             'driver' => 'passport',
             'provider' => 'customers'
+        ],
+        'user' => [
+            'driver' => 'passport',
+            'provider' => 'users'
         ],
     ],
 
